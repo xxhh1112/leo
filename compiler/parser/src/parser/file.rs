@@ -120,6 +120,8 @@ impl ParserContext<'_> {
     }
 
     /// Parses a program body `credits.aleo { ... }`
+    fn parse_program_body(&mut self, start: Span) -> Result<ProgramScope> {
+    /// Parses a program body `credits.aleo { ... }`
     fn parse_program_body(&mut self, start: Span) -> Result<(ProgramScope, Vec<Identifier>)> {
         // Parse the program name.
         let name = self.expect_identifier()?;
