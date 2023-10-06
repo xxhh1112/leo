@@ -5,491 +5,479 @@ outputs:
   - imports: {}
     stubs:
       credits:
-        imports:
-          - "{\"id\":\"2\",\"name\":\"battleship\",\"span\":\"{\\\"lo\\\":33,\\\"hi\\\":43}\"}"
-          - "{\"id\":\"3\",\"name\":\"exchange\",\"span\":\"{\\\"lo\\\":61,\\\"hi\\\":69}\"}"
         stub_id: "{\"name\":\"credits\",\"network\":\"\\\"{\\\\\\\"id\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"aleo\\\\\\\",\\\\\\\"span\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"lo\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"hi\\\\\\\\\\\\\\\":0}\\\\\\\"}\\\"\"}"
         consts: []
         structs:
           - - credits
-            - identifier: "{\"id\":\"4\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":87,\\\"hi\\\":94}\"}"
+            - identifier: "{\"id\":\"2\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":33,\\\"hi\\\":40}\"}"
               members:
                 - mode: None
-                  identifier: "{\"id\":\"5\",\"name\":\"owner\",\"span\":\"{\\\"lo\\\":105,\\\"hi\\\":110}\"}"
+                  identifier: "{\"id\":\"3\",\"name\":\"owner\",\"span\":\"{\\\"lo\\\":51,\\\"hi\\\":56}\"}"
                   type_: Address
                   span:
-                    lo: 105
-                    hi: 119
-                  id: 6
+                    lo: 51
+                    hi: 65
+                  id: 4
                 - mode: None
-                  identifier: "{\"id\":\"7\",\"name\":\"micrcredits\",\"span\":\"{\\\"lo\\\":129,\\\"hi\\\":140}\"}"
+                  identifier: "{\"id\":\"5\",\"name\":\"micrcredits\",\"span\":\"{\\\"lo\\\":75,\\\"hi\\\":86}\"}"
                   type_:
                     Integer: U64
                   span:
-                    lo: 129
-                    hi: 145
-                  id: 8
+                    lo: 75
+                    hi: 91
+                  id: 6
               is_record: true
               span:
-                lo: 80
-                hi: 152
-              id: 9
+                lo: 26
+                hi: 98
+              id: 7
           - - Row
-            - identifier: "{\"id\":\"10\",\"name\":\"Row\",\"span\":\"{\\\"lo\\\":164,\\\"hi\\\":167}\"}"
+            - identifier: "{\"id\":\"8\",\"name\":\"Row\",\"span\":\"{\\\"lo\\\":110,\\\"hi\\\":113}\"}"
               members:
                 - mode: None
-                  identifier: "{\"id\":\"11\",\"name\":\"c1\",\"span\":\"{\\\"lo\\\":178,\\\"hi\\\":180}\"}"
+                  identifier: "{\"id\":\"9\",\"name\":\"c1\",\"span\":\"{\\\"lo\\\":124,\\\"hi\\\":126}\"}"
                   type_:
                     Integer: U8
                   span:
-                    lo: 178
-                    hi: 184
+                    lo: 124
+                    hi: 130
+                  id: 10
+                - mode: None
+                  identifier: "{\"id\":\"11\",\"name\":\"c2\",\"span\":\"{\\\"lo\\\":140,\\\"hi\\\":142}\"}"
+                  type_:
+                    Integer: U8
+                  span:
+                    lo: 140
+                    hi: 146
                   id: 12
                 - mode: None
-                  identifier: "{\"id\":\"13\",\"name\":\"c2\",\"span\":\"{\\\"lo\\\":194,\\\"hi\\\":196}\"}"
+                  identifier: "{\"id\":\"13\",\"name\":\"c3\",\"span\":\"{\\\"lo\\\":156,\\\"hi\\\":158}\"}"
                   type_:
                     Integer: U8
                   span:
-                    lo: 194
-                    hi: 200
+                    lo: 156
+                    hi: 162
                   id: 14
-                - mode: None
-                  identifier: "{\"id\":\"15\",\"name\":\"c3\",\"span\":\"{\\\"lo\\\":210,\\\"hi\\\":212}\"}"
-                  type_:
-                    Integer: U8
-                  span:
-                    lo: 210
-                    hi: 216
-                  id: 16
               is_record: false
               span:
-                lo: 157
-                hi: 222
-              id: 17
+                lo: 103
+                hi: 168
+              id: 15
           - - board_state
-            - identifier: "{\"id\":\"20\",\"name\":\"board_state\",\"span\":\"{\\\"lo\\\":270,\\\"hi\\\":281}\"}"
+            - identifier: "{\"id\":\"18\",\"name\":\"board_state\",\"span\":\"{\\\"lo\\\":216,\\\"hi\\\":227}\"}"
               members:
                 - mode: None
-                  identifier: "{\"id\":\"21\",\"name\":\"owner\",\"span\":\"{\\\"lo\\\":292,\\\"hi\\\":297}\"}"
+                  identifier: "{\"id\":\"19\",\"name\":\"owner\",\"span\":\"{\\\"lo\\\":238,\\\"hi\\\":243}\"}"
                   type_: Address
                   span:
-                    lo: 292
-                    hi: 306
+                    lo: 238
+                    hi: 252
+                  id: 20
+                - mode: None
+                  identifier: "{\"id\":\"21\",\"name\":\"hits_and_misses\",\"span\":\"{\\\"lo\\\":329,\\\"hi\\\":344}\"}"
+                  type_:
+                    Integer: U64
+                  span:
+                    lo: 329
+                    hi: 349
                   id: 22
                 - mode: None
-                  identifier: "{\"id\":\"23\",\"name\":\"hits_and_misses\",\"span\":\"{\\\"lo\\\":383,\\\"hi\\\":398}\"}"
+                  identifier: "{\"id\":\"23\",\"name\":\"played_tiles\",\"span\":\"{\\\"lo\\\":429,\\\"hi\\\":441}\"}"
                   type_:
                     Integer: U64
                   span:
-                    lo: 383
-                    hi: 403
+                    lo: 429
+                    hi: 446
                   id: 24
                 - mode: None
-                  identifier: "{\"id\":\"25\",\"name\":\"played_tiles\",\"span\":\"{\\\"lo\\\":483,\\\"hi\\\":495}\"}"
+                  identifier: "{\"id\":\"25\",\"name\":\"ships\",\"span\":\"{\\\"lo\\\":536,\\\"hi\\\":541}\"}"
                   type_:
                     Integer: U64
                   span:
-                    lo: 483
-                    hi: 500
+                    lo: 536
+                    hi: 546
                   id: 26
                 - mode: None
-                  identifier: "{\"id\":\"27\",\"name\":\"ships\",\"span\":\"{\\\"lo\\\":590,\\\"hi\\\":595}\"}"
-                  type_:
-                    Integer: U64
+                  identifier: "{\"id\":\"27\",\"name\":\"player_1\",\"span\":\"{\\\"lo\\\":556,\\\"hi\\\":564}\"}"
+                  type_: Address
                   span:
-                    lo: 590
-                    hi: 600
+                    lo: 556
+                    hi: 573
                   id: 28
                 - mode: None
-                  identifier: "{\"id\":\"29\",\"name\":\"player_1\",\"span\":\"{\\\"lo\\\":610,\\\"hi\\\":618}\"}"
+                  identifier: "{\"id\":\"29\",\"name\":\"player_2\",\"span\":\"{\\\"lo\\\":583,\\\"hi\\\":591}\"}"
                   type_: Address
                   span:
-                    lo: 610
-                    hi: 627
+                    lo: 583
+                    hi: 600
                   id: 30
                 - mode: None
-                  identifier: "{\"id\":\"31\",\"name\":\"player_2\",\"span\":\"{\\\"lo\\\":637,\\\"hi\\\":645}\"}"
-                  type_: Address
-                  span:
-                    lo: 637
-                    hi: 654
-                  id: 32
-                - mode: None
-                  identifier: "{\"id\":\"33\",\"name\":\"game_started\",\"span\":\"{\\\"lo\\\":664,\\\"hi\\\":676}\"}"
+                  identifier: "{\"id\":\"31\",\"name\":\"game_started\",\"span\":\"{\\\"lo\\\":610,\\\"hi\\\":622}\"}"
                   type_: Boolean
                   span:
-                    lo: 664
-                    hi: 682
-                  id: 34
+                    lo: 610
+                    hi: 628
+                  id: 32
               is_record: true
               span:
-                lo: 263
-                hi: 689
-              id: 35
+                lo: 209
+                hi: 635
+              id: 33
         mappings:
           - - num_winners
-            - identifier: "{\"id\":\"18\",\"name\":\"num_winners\",\"span\":\"{\\\"lo\\\":235,\\\"hi\\\":246}\"}"
+            - identifier: "{\"id\":\"16\",\"name\":\"num_winners\",\"span\":\"{\\\"lo\\\":181,\\\"hi\\\":192}\"}"
               key_type:
                 Integer: U8
               value_type:
                 Integer: U8
               span:
-                lo: 227
-                hi: 257
-              id: 19
+                lo: 173
+                hi: 203
+              id: 17
         functions:
           - - mint
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"36\",\"name\":\"mint\",\"span\":\"{\\\"lo\\\":706,\\\"hi\\\":710}\"}"
+              identifier: "{\"id\":\"34\",\"name\":\"mint\",\"span\":\"{\\\"lo\\\":652,\\\"hi\\\":656}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"37\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":718,\\\"hi\\\":720}\"}"
+                    identifier: "{\"id\":\"35\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":664,\\\"hi\\\":666}\"}"
                     mode: Public
                     type_: Address
                     span:
-                      lo: 718
-                      hi: 720
-                    id: 38
+                      lo: 664
+                      hi: 666
+                    id: 36
                 - Internal:
-                    identifier: "{\"id\":\"39\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":738,\\\"hi\\\":740}\"}"
+                    identifier: "{\"id\":\"37\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":684,\\\"hi\\\":686}\"}"
                     mode: Public
                     type_:
                       Integer: U64
                     span:
-                      lo: 738
-                      hi: 740
-                    id: 40
+                      lo: 684
+                      hi: 686
+                    id: 38
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"41\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":750,\\\"hi\\\":757}\"}"
+                      Identifier: "{\"id\":\"39\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":696,\\\"hi\\\":703}\"}"
                     span:
-                      lo: 750
-                      hi: 757
-                    id: 42
+                      lo: 696
+                      hi: 703
+                    id: 40
               output_type:
-                Identifier: "{\"id\":\"41\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":750,\\\"hi\\\":757}\"}"
+                Identifier: "{\"id\":\"39\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":696,\\\"hi\\\":703}\"}"
               block:
                 statements: []
                 span:
-                  lo: 757
-                  hi: 758
-                id: 43
+                  lo: 703
+                  hi: 704
+                id: 41
               finalize: ~
               span:
-                lo: 695
-                hi: 758
-              id: 44
+                lo: 641
+                hi: 704
+              id: 42
           - - transfer_public
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"45\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":775,\\\"hi\\\":790}\"}"
+              identifier: "{\"id\":\"43\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":721,\\\"hi\\\":736}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"46\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":798,\\\"hi\\\":800}\"}"
+                    identifier: "{\"id\":\"44\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":744,\\\"hi\\\":746}\"}"
                     mode: Public
                     type_: Address
                     span:
-                      lo: 798
-                      hi: 800
-                    id: 47
+                      lo: 744
+                      hi: 746
+                    id: 45
                 - Internal:
-                    identifier: "{\"id\":\"48\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":818,\\\"hi\\\":820}\"}"
+                    identifier: "{\"id\":\"46\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":764,\\\"hi\\\":766}\"}"
                     mode: Public
                     type_:
                       Integer: U64
                     span:
-                      lo: 818
-                      hi: 820
-                    id: 49
-              output:
-                - External:
-                    identifier: "{\"id\":\"52\",\"name\":\"dummy\",\"span\":\"{\\\"lo\\\":0,\\\"hi\\\":0}\"}"
-                    program_name: "{\"id\":\"50\",\"name\":\"exchange\",\"span\":\"{\\\"lo\\\":830,\\\"hi\\\":838}\"}"
-                    record: "{\"id\":\"51\",\"name\":\"tokens\",\"span\":\"{\\\"lo\\\":844,\\\"hi\\\":850}\"}"
-                    span:
-                      lo: 830
-                      hi: 850
-                    id: 53
-              output_type:
-                Identifier: "{\"id\":\"51\",\"name\":\"tokens\",\"span\":\"{\\\"lo\\\":844,\\\"hi\\\":850}\"}"
+                      lo: 764
+                      hi: 766
+                    id: 47
+              output: []
+              output_type: Unit
               block:
                 statements: []
                 span:
-                  lo: 850
-                  hi: 851
-                id: 54
+                  lo: 772
+                  hi: 773
+                id: 48
               finalize: ~
               span:
-                lo: 764
-                hi: 851
-              id: 55
+                lo: 710
+                hi: 773
+              id: 49
           - - transfer_private
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"56\",\"name\":\"transfer_private\",\"span\":\"{\\\"lo\\\":868,\\\"hi\\\":884}\"}"
+              identifier: "{\"id\":\"50\",\"name\":\"transfer_private\",\"span\":\"{\\\"lo\\\":790,\\\"hi\\\":806}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"57\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":885,\\\"hi\\\":887}\"}"
+                    identifier: "{\"id\":\"51\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":807,\\\"hi\\\":809}\"}"
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"58\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":889,\\\"hi\\\":896}\"}"
+                      Identifier: "{\"id\":\"52\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":811,\\\"hi\\\":818}\"}"
                     span:
-                      lo: 885
-                      hi: 887
-                    id: 59
+                      lo: 807
+                      hi: 809
+                    id: 53
                 - Internal:
-                    identifier: "{\"id\":\"60\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":898,\\\"hi\\\":900}\"}"
+                    identifier: "{\"id\":\"54\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":820,\\\"hi\\\":822}\"}"
                     mode: None
                     type_: Address
                     span:
-                      lo: 898
-                      hi: 900
-                    id: 61
+                      lo: 820
+                      hi: 822
+                    id: 55
                 - Internal:
-                    identifier: "{\"id\":\"62\",\"name\":\"a3\",\"span\":\"{\\\"lo\\\":911,\\\"hi\\\":913}\"}"
+                    identifier: "{\"id\":\"56\",\"name\":\"a3\",\"span\":\"{\\\"lo\\\":833,\\\"hi\\\":835}\"}"
                     mode: None
                     type_:
                       Integer: U64
                     span:
-                      lo: 911
-                      hi: 913
-                    id: 63
+                      lo: 833
+                      hi: 835
+                    id: 57
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"64\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":924,\\\"hi\\\":931}\"}"
+                      Identifier: "{\"id\":\"58\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":846,\\\"hi\\\":853}\"}"
                     span:
-                      lo: 924
-                      hi: 931
-                    id: 65
+                      lo: 846
+                      hi: 853
+                    id: 59
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"66\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":933,\\\"hi\\\":940}\"}"
+                      Identifier: "{\"id\":\"60\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":855,\\\"hi\\\":862}\"}"
                     span:
-                      lo: 933
-                      hi: 940
-                    id: 67
+                      lo: 855
+                      hi: 862
+                    id: 61
               output_type:
                 Tuple:
-                  - Identifier: "{\"id\":\"64\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":924,\\\"hi\\\":931}\"}"
-                  - Identifier: "{\"id\":\"66\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":933,\\\"hi\\\":940}\"}"
+                  - Identifier: "{\"id\":\"58\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":846,\\\"hi\\\":853}\"}"
+                  - Identifier: "{\"id\":\"60\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":855,\\\"hi\\\":862}\"}"
               block:
                 statements: []
                 span:
-                  lo: 941
-                  hi: 942
-                id: 68
+                  lo: 863
+                  hi: 864
+                id: 62
               finalize: ~
               span:
-                lo: 857
-                hi: 942
-              id: 69
+                lo: 779
+                hi: 864
+              id: 63
           - - transfer_private_to_public
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"70\",\"name\":\"transfer_private_to_public\",\"span\":\"{\\\"lo\\\":959,\\\"hi\\\":985}\"}"
+              identifier: "{\"id\":\"64\",\"name\":\"transfer_private_to_public\",\"span\":\"{\\\"lo\\\":881,\\\"hi\\\":907}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"71\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":986,\\\"hi\\\":988}\"}"
+                    identifier: "{\"id\":\"65\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":908,\\\"hi\\\":910}\"}"
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"72\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":990,\\\"hi\\\":997}\"}"
+                      Identifier: "{\"id\":\"66\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":912,\\\"hi\\\":919}\"}"
                     span:
-                      lo: 986
-                      hi: 988
-                    id: 73
+                      lo: 908
+                      hi: 910
+                    id: 67
                 - Internal:
-                    identifier: "{\"id\":\"74\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1006,\\\"hi\\\":1008}\"}"
+                    identifier: "{\"id\":\"68\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":928,\\\"hi\\\":930}\"}"
                     mode: Public
                     type_: Address
                     span:
-                      lo: 1006
-                      hi: 1008
-                    id: 75
+                      lo: 928
+                      hi: 930
+                    id: 69
                 - Internal:
-                    identifier: "{\"id\":\"76\",\"name\":\"a3\",\"span\":\"{\\\"lo\\\":1026,\\\"hi\\\":1028}\"}"
+                    identifier: "{\"id\":\"70\",\"name\":\"a3\",\"span\":\"{\\\"lo\\\":948,\\\"hi\\\":950}\"}"
                     mode: Public
                     type_:
                       Integer: U64
                     span:
-                      lo: 1026
-                      hi: 1028
-                    id: 77
+                      lo: 948
+                      hi: 950
+                    id: 71
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"78\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1038,\\\"hi\\\":1045}\"}"
+                      Identifier: "{\"id\":\"72\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":960,\\\"hi\\\":967}\"}"
                     span:
-                      lo: 1038
-                      hi: 1045
-                    id: 79
+                      lo: 960
+                      hi: 967
+                    id: 73
               output_type:
-                Identifier: "{\"id\":\"78\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1038,\\\"hi\\\":1045}\"}"
+                Identifier: "{\"id\":\"72\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":960,\\\"hi\\\":967}\"}"
               block:
                 statements: []
                 span:
-                  lo: 1045
-                  hi: 1046
-                id: 80
+                  lo: 967
+                  hi: 968
+                id: 74
               finalize: ~
               span:
-                lo: 948
-                hi: 1046
-              id: 81
+                lo: 870
+                hi: 968
+              id: 75
           - - transfer_public_to_private
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"82\",\"name\":\"transfer_public_to_private\",\"span\":\"{\\\"lo\\\":1063,\\\"hi\\\":1089}\"}"
+              identifier: "{\"id\":\"76\",\"name\":\"transfer_public_to_private\",\"span\":\"{\\\"lo\\\":985,\\\"hi\\\":1011}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"83\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1097,\\\"hi\\\":1099}\"}"
+                    identifier: "{\"id\":\"77\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1019,\\\"hi\\\":1021}\"}"
                     mode: Public
                     type_: Address
                     span:
-                      lo: 1097
-                      hi: 1099
-                    id: 84
+                      lo: 1019
+                      hi: 1021
+                    id: 78
                 - Internal:
-                    identifier: "{\"id\":\"85\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1117,\\\"hi\\\":1119}\"}"
+                    identifier: "{\"id\":\"79\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1039,\\\"hi\\\":1041}\"}"
                     mode: Public
                     type_:
                       Integer: U64
                     span:
-                      lo: 1117
-                      hi: 1119
-                    id: 86
+                      lo: 1039
+                      hi: 1041
+                    id: 80
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"87\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1129,\\\"hi\\\":1136}\"}"
+                      Identifier: "{\"id\":\"81\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1051,\\\"hi\\\":1058}\"}"
                     span:
-                      lo: 1129
-                      hi: 1136
-                    id: 88
+                      lo: 1051
+                      hi: 1058
+                    id: 82
               output_type:
-                Identifier: "{\"id\":\"87\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1129,\\\"hi\\\":1136}\"}"
+                Identifier: "{\"id\":\"81\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1051,\\\"hi\\\":1058}\"}"
               block:
                 statements: []
                 span:
-                  lo: 1136
-                  hi: 1137
-                id: 89
+                  lo: 1058
+                  hi: 1059
+                id: 83
               finalize: ~
               span:
-                lo: 1052
-                hi: 1137
-              id: 90
+                lo: 974
+                hi: 1059
+              id: 84
           - - join
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"91\",\"name\":\"join\",\"span\":\"{\\\"lo\\\":1154,\\\"hi\\\":1158}\"}"
+              identifier: "{\"id\":\"85\",\"name\":\"join\",\"span\":\"{\\\"lo\\\":1076,\\\"hi\\\":1080}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"92\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1159,\\\"hi\\\":1161}\"}"
+                    identifier: "{\"id\":\"86\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1081,\\\"hi\\\":1083}\"}"
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"93\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1163,\\\"hi\\\":1170}\"}"
+                      Identifier: "{\"id\":\"87\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1085,\\\"hi\\\":1092}\"}"
                     span:
-                      lo: 1159
-                      hi: 1161
-                    id: 94
+                      lo: 1081
+                      hi: 1083
+                    id: 88
                 - Internal:
-                    identifier: "{\"id\":\"95\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1172,\\\"hi\\\":1174}\"}"
+                    identifier: "{\"id\":\"89\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1094,\\\"hi\\\":1096}\"}"
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"96\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1176,\\\"hi\\\":1183}\"}"
+                      Identifier: "{\"id\":\"90\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1098,\\\"hi\\\":1105}\"}"
                     span:
-                      lo: 1172
-                      hi: 1174
-                    id: 97
+                      lo: 1094
+                      hi: 1096
+                    id: 91
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"98\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1188,\\\"hi\\\":1195}\"}"
+                      Identifier: "{\"id\":\"92\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1110,\\\"hi\\\":1117}\"}"
                     span:
-                      lo: 1188
-                      hi: 1195
-                    id: 99
+                      lo: 1110
+                      hi: 1117
+                    id: 93
               output_type:
-                Identifier: "{\"id\":\"98\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1188,\\\"hi\\\":1195}\"}"
+                Identifier: "{\"id\":\"92\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1110,\\\"hi\\\":1117}\"}"
               block:
                 statements: []
                 span:
-                  lo: 1195
-                  hi: 1196
-                id: 100
+                  lo: 1117
+                  hi: 1118
+                id: 94
               finalize: ~
               span:
-                lo: 1143
-                hi: 1196
-              id: 101
+                lo: 1065
+                hi: 1118
+              id: 95
           - - split
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"102\",\"name\":\"split\",\"span\":\"{\\\"lo\\\":1213,\\\"hi\\\":1218}\"}"
+              identifier: "{\"id\":\"96\",\"name\":\"split\",\"span\":\"{\\\"lo\\\":1135,\\\"hi\\\":1140}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"103\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1219,\\\"hi\\\":1221}\"}"
+                    identifier: "{\"id\":\"97\",\"name\":\"a1\",\"span\":\"{\\\"lo\\\":1141,\\\"hi\\\":1143}\"}"
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"104\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1223,\\\"hi\\\":1230}\"}"
+                      Identifier: "{\"id\":\"98\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1145,\\\"hi\\\":1152}\"}"
                     span:
-                      lo: 1219
-                      hi: 1221
-                    id: 105
+                      lo: 1141
+                      hi: 1143
+                    id: 99
                 - Internal:
-                    identifier: "{\"id\":\"106\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1232,\\\"hi\\\":1234}\"}"
+                    identifier: "{\"id\":\"100\",\"name\":\"a2\",\"span\":\"{\\\"lo\\\":1154,\\\"hi\\\":1156}\"}"
                     mode: None
                     type_:
                       Integer: U64
                     span:
-                      lo: 1232
-                      hi: 1234
-                    id: 107
+                      lo: 1154
+                      hi: 1156
+                    id: 101
               output:
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"108\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1245,\\\"hi\\\":1252}\"}"
+                      Identifier: "{\"id\":\"102\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1167,\\\"hi\\\":1174}\"}"
                     span:
-                      lo: 1245
-                      hi: 1252
-                    id: 109
+                      lo: 1167
+                      hi: 1174
+                    id: 103
                 - Internal:
                     mode: None
                     type_:
-                      Identifier: "{\"id\":\"110\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1254,\\\"hi\\\":1261}\"}"
+                      Identifier: "{\"id\":\"104\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1176,\\\"hi\\\":1183}\"}"
                     span:
-                      lo: 1254
-                      hi: 1261
-                    id: 111
+                      lo: 1176
+                      hi: 1183
+                    id: 105
               output_type:
                 Tuple:
-                  - Identifier: "{\"id\":\"108\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1245,\\\"hi\\\":1252}\"}"
-                  - Identifier: "{\"id\":\"110\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1254,\\\"hi\\\":1261}\"}"
+                  - Identifier: "{\"id\":\"102\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1167,\\\"hi\\\":1174}\"}"
+                  - Identifier: "{\"id\":\"104\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1176,\\\"hi\\\":1183}\"}"
               block:
                 statements: []
                 span:
-                  lo: 1262
-                  hi: 1263
-                id: 112
+                  lo: 1184
+                  hi: 1185
+                id: 106
               finalize: ~
               span:
-                lo: 1202
-                hi: 1263
-              id: 113
+                lo: 1124
+                hi: 1185
+              id: 107
           - - foo
             - annotations: []
               variant: Standard
-              identifier: "{\"id\":\"114\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1278,\\\"hi\\\":1281}\"}"
+              identifier: "{\"id\":\"108\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1200,\\\"hi\\\":1203}\"}"
               input: []
               output: []
               output_type: Unit
@@ -498,7 +486,7 @@ outputs:
                   - Definition:
                       declaration_type: Let
                       place:
-                        Identifier: "{\"id\":\"115\",\"name\":\"a\",\"span\":\"{\\\"lo\\\":1297,\\\"hi\\\":1298}\"}"
+                        Identifier: "{\"id\":\"109\",\"name\":\"a\",\"span\":\"{\\\"lo\\\":1219,\\\"hi\\\":1220}\"}"
                       type_:
                         Integer: U8
                       value:
@@ -507,19 +495,19 @@ outputs:
                             - U8
                             - "1"
                             - span:
-                                lo: 1304
-                                hi: 1307
-                            - 116
+                                lo: 1226
+                                hi: 1229
+                            - 110
                       span:
-                        lo: 1293
-                        hi: 1307
-                      id: 117
+                        lo: 1215
+                        hi: 1229
+                      id: 111
                 span:
-                  lo: 1284
-                  hi: 1314
-                id: 118
+                  lo: 1206
+                  hi: 1236
+                id: 112
               finalize:
-                identifier: "{\"id\":\"119\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1328,\\\"hi\\\":1331}\"}"
+                identifier: "{\"id\":\"113\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1250,\\\"hi\\\":1253}\"}"
                 input: []
                 output: []
                 output_type: Unit
@@ -528,7 +516,7 @@ outputs:
                     - Definition:
                         declaration_type: Let
                         place:
-                          Identifier: "{\"id\":\"120\",\"name\":\"c\",\"span\":\"{\\\"lo\\\":1348,\\\"hi\\\":1349}\"}"
+                          Identifier: "{\"id\":\"114\",\"name\":\"c\",\"span\":\"{\\\"lo\\\":1270,\\\"hi\\\":1271}\"}"
                         type_:
                           Integer: U8
                         value:
@@ -537,190 +525,106 @@ outputs:
                               - U8
                               - "1"
                               - span:
-                                  lo: 1355
-                                  hi: 1358
-                              - 121
+                                  lo: 1277
+                                  hi: 1280
+                              - 115
                         span:
-                          lo: 1344
-                          hi: 1358
-                        id: 122
+                          lo: 1266
+                          hi: 1280
+                        id: 116
                   span:
-                    lo: 1334
-                    hi: 1365
-                  id: 123
+                    lo: 1256
+                    hi: 1287
+                  id: 117
                 span:
-                  lo: 1319
-                  hi: 1365
-                id: 124
+                  lo: 1241
+                  hi: 1287
+                id: 118
               span:
-                lo: 1269
-                hi: 1314
-              id: 125
+                lo: 1191
+                hi: 1236
+              id: 119
         span:
           lo: 2
-          hi: 1367
+          hi: 1289
     program_scopes:
       test:
-        program_id: "{\"name\":\"test\",\"network\":\"\\\"{\\\\\\\"id\\\\\\\":\\\\\\\"127\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"aleo\\\\\\\",\\\\\\\"span\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"lo\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"hi\\\\\\\\\\\\\\\":0}\\\\\\\"}\\\"\"}"
+        program_id: "{\"name\":\"test\",\"network\":\"\\\"{\\\\\\\"id\\\\\\\":\\\\\\\"121\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"aleo\\\\\\\",\\\\\\\"span\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"lo\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"hi\\\\\\\\\\\\\\\":0}\\\\\\\"}\\\"\"}"
         consts: []
-        structs:
-          - - pennies
-            - identifier: "{\"id\":\"128\",\"name\":\"pennies\",\"span\":\"{\\\"lo\\\":1400,\\\"hi\\\":1407}\"}"
-              members:
-                - mode: None
-                  identifier: "{\"id\":\"129\",\"name\":\"owner\",\"span\":\"{\\\"lo\\\":1418,\\\"hi\\\":1423}\"}"
-                  type_: Address
-                  span:
-                    lo: 1418
-                    hi: 1432
-                  id: 130
-                - mode: None
-                  identifier: "{\"id\":\"131\",\"name\":\"number\",\"span\":\"{\\\"lo\\\":1442,\\\"hi\\\":1448}\"}"
-                  type_:
-                    Integer: U64
-                  span:
-                    lo: 1442
-                    hi: 1453
-                  id: 132
-              is_record: true
-              span:
-                lo: 1393
-                hi: 1460
-              id: 133
+        structs: []
         mappings: []
         functions:
           - - foo
             - annotations: []
               variant: Transition
-              identifier: "{\"id\":\"134\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1476,\\\"hi\\\":1479}\"}"
+              identifier: "{\"id\":\"122\",\"name\":\"foo\",\"span\":\"{\\\"lo\\\":1326,\\\"hi\\\":1329}\"}"
               input:
                 - Internal:
-                    identifier: "{\"id\":\"135\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1480,\\\"hi\\\":1484}\"}"
+                    identifier: "{\"id\":\"123\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1330,\\\"hi\\\":1334}\"}"
                     mode: None
                     type_: Address
                     span:
-                      lo: 1480
-                      hi: 1484
-                    id: 136
+                      lo: 1330
+                      hi: 1334
+                    id: 124
                 - Internal:
-                    identifier: "{\"id\":\"137\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1495,\\\"hi\\\":1499}\"}"
+                    identifier: "{\"id\":\"125\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1345,\\\"hi\\\":1349}\"}"
                     mode: None
                     type_:
                       Integer: U64
                     span:
-                      lo: 1495
-                      hi: 1499
-                    id: 138
-                - External:
-                    identifier: "{\"id\":\"139\",\"name\":\"cred\",\"span\":\"{\\\"lo\\\":1506,\\\"hi\\\":1510}\"}"
-                    program_name: "{\"id\":\"140\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1512,\\\"hi\\\":1519}\"}"
-                    record: "{\"id\":\"141\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1525,\\\"hi\\\":1532}\"}"
-                    span:
-                      lo: 1506
-                      hi: 1532
-                    id: 142
-              output:
-                - External:
-                    identifier: "{\"id\":\"145\",\"name\":\"dummy\",\"span\":\"{\\\"lo\\\":0,\\\"hi\\\":0}\"}"
-                    program_name: "{\"id\":\"143\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1535,\\\"hi\\\":1542}\"}"
-                    record: "{\"id\":\"144\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1548,\\\"hi\\\":1555}\"}"
-                    span:
-                      lo: 1535
-                      hi: 1555
-                    id: 146
-              output_type:
-                Identifier: "{\"id\":\"144\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1548,\\\"hi\\\":1555}\"}"
+                      lo: 1345
+                      hi: 1349
+                    id: 126
+              output: []
+              output_type: Unit
               block:
                 statements:
                   - Expression:
                       expression:
                         Call:
                           function:
-                            Identifier: "{\"id\":\"148\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":1579,\\\"hi\\\":1594}\"}"
+                            Identifier: "{\"id\":\"128\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":1379,\\\"hi\\\":1394}\"}"
                           arguments:
-                            - Identifier: "{\"id\":\"149\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1595,\\\"hi\\\":1599}\"}"
-                            - Identifier: "{\"id\":\"150\",\"name\":\"arg2\",\"span\":\"{\\\"lo\\\":1601,\\\"hi\\\":1605}\"}"
+                            - Identifier: "{\"id\":\"129\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1395,\\\"hi\\\":1399}\"}"
+                            - Identifier: "{\"id\":\"130\",\"name\":\"arg2\",\"span\":\"{\\\"lo\\\":1401,\\\"hi\\\":1405}\"}"
                           external:
-                            Identifier: "{\"id\":\"147\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1566,\\\"hi\\\":1573}\"}"
+                            Identifier: "{\"id\":\"127\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1366,\\\"hi\\\":1373}\"}"
                           span:
-                            lo: 1566
-                            hi: 1606
-                          id: 151
+                            lo: 1366
+                            hi: 1406
+                          id: 131
                       span:
-                        lo: 1566
-                        hi: 1607
-                      id: 152
+                        lo: 1366
+                        hi: 1407
+                      id: 132
                   - Expression:
                       expression:
                         Call:
                           function:
-                            Identifier: "{\"id\":\"154\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":1628,\\\"hi\\\":1643}\"}"
+                            Identifier: "{\"id\":\"134\",\"name\":\"transfer_public\",\"span\":\"{\\\"lo\\\":1428,\\\"hi\\\":1443}\"}"
                           arguments:
-                            - Identifier: "{\"id\":\"155\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1644,\\\"hi\\\":1648}\"}"
-                            - Identifier: "{\"id\":\"156\",\"name\":\"arg2\",\"span\":\"{\\\"lo\\\":1650,\\\"hi\\\":1654}\"}"
+                            - Identifier: "{\"id\":\"135\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1444,\\\"hi\\\":1448}\"}"
+                            - Identifier: "{\"id\":\"136\",\"name\":\"arg2\",\"span\":\"{\\\"lo\\\":1450,\\\"hi\\\":1454}\"}"
                           external:
-                            Identifier: "{\"id\":\"153\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1616,\\\"hi\\\":1623}\"}"
+                            Identifier: "{\"id\":\"133\",\"name\":\"credits\",\"span\":\"{\\\"lo\\\":1416,\\\"hi\\\":1423}\"}"
                           span:
-                            lo: 1616
-                            hi: 1655
-                          id: 157
+                            lo: 1416
+                            hi: 1455
+                          id: 137
                       span:
-                        lo: 1616
-                        hi: 1656
-                      id: 158
+                        lo: 1416
+                        hi: 1456
+                      id: 138
                 span:
-                  lo: 1556
-                  hi: 1662
-                id: 159
+                  lo: 1356
+                  hi: 1462
+                id: 139
               finalize: ~
               span:
-                lo: 1465
-                hi: 1662
-              id: 160
-          - - boo
-            - annotations: []
-              variant: Transition
-              identifier: "{\"id\":\"161\",\"name\":\"boo\",\"span\":\"{\\\"lo\\\":1678,\\\"hi\\\":1681}\"}"
-              input:
-                - Internal:
-                    identifier: "{\"id\":\"162\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1682,\\\"hi\\\":1686}\"}"
-                    mode: None
-                    type_:
-                      Identifier: "{\"id\":\"163\",\"name\":\"pennies\",\"span\":\"{\\\"lo\\\":1688,\\\"hi\\\":1695}\"}"
-                    span:
-                      lo: 1682
-                      hi: 1686
-                    id: 164
-              output:
-                - Internal:
-                    mode: None
-                    type_:
-                      Identifier: "{\"id\":\"165\",\"name\":\"pennies\",\"span\":\"{\\\"lo\\\":1698,\\\"hi\\\":1705}\"}"
-                    span:
-                      lo: 1698
-                      hi: 1705
-                    id: 166
-              output_type:
-                Identifier: "{\"id\":\"165\",\"name\":\"pennies\",\"span\":\"{\\\"lo\\\":1698,\\\"hi\\\":1705}\"}"
-              block:
-                statements:
-                  - Return:
-                      expression:
-                        Identifier: "{\"id\":\"167\",\"name\":\"arg1\",\"span\":\"{\\\"lo\\\":1722,\\\"hi\\\":1726}\"}"
-                      finalize_arguments: ~
-                      span:
-                        lo: 1715
-                        hi: 1727
-                      id: 168
-                span:
-                  lo: 1706
-                  hi: 1733
-                id: 169
-              finalize: ~
-              span:
-                lo: 1667
-                hi: 1733
-              id: 170
+                lo: 1315
+                hi: 1462
+              id: 140
         span:
-          lo: 1369
-          hi: 1735
+          lo: 1291
+          hi: 1464
