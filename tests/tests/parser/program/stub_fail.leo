@@ -7,9 +7,6 @@ stub credits.aleo {
     transition split(a1: credits, a2: u64) -> (credits, credits) {}
 
     function foo();
-    finalize foo() {
-        let c:u8 = 1u8;
-    }
 }
 
 stub big.leo {
