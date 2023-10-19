@@ -120,7 +120,7 @@ impl ParserContext<'_> {
     }
 
     /// Parses a program body `credits.aleo { ... }`
-    fn parse_program_body(&mut self, start: Span) -> Result<(ProgramScope, Vec<Identifier>)> {
+    fn parse_program_body(&mut self, start: Span) -> Result<(ProgramScope, Vec<ProgramId>)> {
         // Parse the program name.
         let name = self.expect_identifier()?;
 
@@ -142,7 +142,7 @@ impl ParserContext<'_> {
         let mut functions: Vec<(Symbol, Function)> = Vec::new();
         let mut structs: Vec<(Symbol, Struct)> = Vec::new();
         let mut mappings: Vec<(Symbol, Mapping)> = Vec::new();
-        let mut imports: Vec<Identifier> = Vec::new();
+        let mut imports: Vec<ProgramId> = Vec::new();
 
         while self.has_next() {
             match &self.token.token {
@@ -152,7 +152,10 @@ impl ParserContext<'_> {
                     self.expect(&Token::Dot)?;
                     self.expect(&Token::Aleo)?;
                     self.expect(&Token::Semicolon)?;
-                    imports.push(import_name);
+                    imports.push(ProgramId {
+                        name: import_name,
+                        network: Identifier::new(Symbol::intern("aleo"), self.node_builder.next_id()),
+                    });
                 }
                 Token::Const => {
                     let declaration = self.parse_const_declaration_statement()?;
