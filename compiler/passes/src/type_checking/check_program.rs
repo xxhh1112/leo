@@ -87,12 +87,12 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
             ));
         }
 
-        // Must be transition functions
+        // Must be transition functions or functions not inlines
         if input.variant == Variant::Inline {
             self.emit_err(TypeCheckerError::stub_functions_must_not_be_inlines(input.span));
         }
 
-        // Must be empty
+        // Must have empty block
         if !input.block.statements.is_empty() {
             self.emit_err(TypeCheckerError::stub_functions_must_be_empty(input.block.span));
         }
@@ -112,14 +112,6 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
     }
 
     fn visit_struct_stub(&mut self, input: &'a Struct) {
-        // Allow records only.
-        if !input.is_record {
-            self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
-                "non-record struct",
-                input.span,
-            ));
-        }
-
         self.visit_struct(input);
     }
 
