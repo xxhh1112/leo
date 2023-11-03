@@ -34,8 +34,12 @@ impl ParserContext<'_> {
         while self.has_next() {
             match &self.token.token {
                 Token::Import => {
-                    let (id, import) = self.parse_import()?;
-                    imports.insert(id, import);
+                    let (id, import, is_aleo) = self.parse_import()?;
+                    if is_aleo {
+                        stubs.insert(id, Stub::default());
+                    } else {
+                        imports.insert(id, import);
+                    }
                 }
                 Token::Stub => {
                     let (id, stub) = self.parse_stub()?;
@@ -74,7 +78,7 @@ impl ParserContext<'_> {
 
     // TODO: remove import resolution from parser.
     /// Parses an import statement `import foo.leo;`.
-    pub(super) fn parse_import(&mut self) -> Result<(Symbol, (Program, Span))> {
+    pub(super) fn parse_import(&mut self) -> Result<(Symbol, (Program, Span), bool)> {
         // Parse `import`.
         let start = self.expect(&Token::Import)?;
 
@@ -83,9 +87,19 @@ impl ParserContext<'_> {
 
         // Parse `.leo`.
         self.expect(&Token::Dot)?;
+
+        if self.token.token == Token::Aleo {
+            // Parse `.aleo`.
+            self.expect(&Token::Aleo)?;
+            // Parse `;`.
+            let end = self.expect(&Token::Semicolon)?;
+            // Return the import name and the span.
+            return Ok((import_name.name, (Program::default(), start + end), true));
+        }
+
         if !self.eat(&Token::Leo) {
             // Throw error for non-leo files.
-            return Err(ParserError::leo_imports_only(self.token.span).into());
+            return Err(ParserError::leo_and_aleo_imports_only(self.token.span).into());
         }
 
         let end = self.expect(&Token::Semicolon)?;
@@ -116,7 +130,7 @@ impl ParserContext<'_> {
         // Use the parser to construct the imported abstract syntax tree (ast).
         let program_ast = parse_ast(self.handler, self.node_builder, &prg_sf.src, prg_sf.start_pos)?;
 
-        Ok((import_name.name, (program_ast.into_repr(), start + end)))
+        Ok((import_name.name, (program_ast.into_repr(), start + end), false))
     }
 
     /// Parses a program body `credits.aleo { ... }`
