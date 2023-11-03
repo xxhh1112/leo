@@ -20,7 +20,7 @@ pub mod function_stub;
 
 pub use function_stub::*;
 
-use crate::{ConstDeclaration, Mapping, ProgramId, Struct};
+use crate::{ConstDeclaration, Identifier, Mapping, NodeID, ProgramId, Struct};
 use leo_span::{Span, Symbol};
 use serde::{Deserialize, Serialize};
 use std::fmt;
