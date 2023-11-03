@@ -539,8 +539,8 @@ impl<'a> CodeGenerator<'a> {
                 {
                     Some(program) => program,
                     None => {
-                        let _stub_program = self.program.stubs.get(&program_name);
-                        if let Some(stub) = self.program.stubs.get(&program_name) {
+                        let stub_program = self.program.stubs.get(&program_name);
+                        if let Some(stub) = stub_program {
                             stub_scope = ProgramScope::from(stub.clone());
                             &stub_scope
                         } else {
