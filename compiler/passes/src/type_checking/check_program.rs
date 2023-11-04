@@ -113,12 +113,13 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
 
     fn visit_struct_stub(&mut self, input: &'a Struct) {
         // Allow records only.
-        if !input.is_record {
-            self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
-                "non-record struct",
-                input.span,
-            ));
-        }
+        // TODO: Keep this or not?
+        // if !input.is_record {
+        //     self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
+        //         "non-record struct",
+        //         input.span,
+        //     ));
+        // }
 
         self.visit_struct(input);
     }

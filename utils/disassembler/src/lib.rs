@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with the Leo library. If not, see <https://www.gnu.org/licenses/>.
 
+use std::str::FromStr;
 use snarkvm::{
-    prelude::{Itertools, Network},
-    synthesizer::program::{CommandTrait, InstructionTrait, ProgramCore},
+    prelude::{Itertools, Network, Testnet3},
+    synthesizer::program::{CommandTrait, InstructionTrait, Program, ProgramCore},
 };
+type CurrentNetwork = Testnet3;
 
 use leo_ast::{FunctionStub, Identifier, ProgramId, Struct, Stub};
-
-fn main() {}
 
 pub fn disassemble<N: Network, Instruction: InstructionTrait<N>, Command: CommandTrait<N>>(
     program: ProgramCore<N, Instruction, Command>,
@@ -51,6 +51,13 @@ pub fn disassemble<N: Network, Instruction: InstructionTrait<N>, Command: Comman
         .concat(),
         span: Default::default(),
     }
+}
+
+pub fn disassemble_from_str(
+    program: String,
+) -> Stub {
+    let program = Program::<CurrentNetwork>::from_str(&program);
+    disassemble(program.expect("Failed to parse program")) // TODO: Handle error
 }
 
 #[cfg(test)]
