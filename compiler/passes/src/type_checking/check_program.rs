@@ -57,7 +57,7 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
 
     fn visit_stub(&mut self, input: &'a Stub) {
         // Cannot have mappings in stubs.
-        if input.mappings.len() != 0 {
+        if !input.mappings.is_empty() {
             self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
                 "mapping",
                 input.mappings.get(0).unwrap().1.span,
@@ -65,7 +65,7 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
         }
 
         // Cannot have constant declarations in stubs.
-        if input.consts.len() != 0 {
+        if !input.consts.is_empty() {
             self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
                 "constant declaration",
                 input.consts.get(0).unwrap().1.span,
@@ -93,66 +93,6 @@ impl<'a> ProgramVisitor<'a> for TypeChecker<'a> {
         }
 
         // Must have empty block
-        if !input.block.statements.is_empty() {
-            self.emit_err(TypeCheckerError::stub_functions_must_be_empty(input.block.span));
-        }
-
-        // Lookup function metadata in the symbol table.
-        // Note that this unwrap is safe since function metadata is stored in a prior pass.
-        let function_index = self.symbol_table.borrow().lookup_fn_symbol(input.identifier.name).unwrap().id;
-
-        // Enter the function's scope.
-        self.enter_scope(function_index);
-
-        // Query helper function to type check function parameters and outputs.
-        self.check_function_signature(&Function::from(input.clone()));
-
-        // Exit the function's scope.
-        self.exit_scope(function_index);
-    }
-
-    fn visit_struct_stub(&mut self, input: &'a Struct) {
-        self.visit_struct(input);
-    }
-
-    fn visit_stub(&mut self, input: &'a Stub) {
-        // Cannot have mappings in stubs.
-        if input.mappings.len() != 0 {
-            self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
-                "mapping",
-                input.mappings.get(0).unwrap().1.span,
-            ));
-        }
-
-        // Cannot have constant declarations in stubs.
-        if input.consts.len() != 0 {
-            self.emit_err(TypeCheckerError::stubs_can_only_have_records_and_transitions(
-                "constant declaration",
-                input.consts.get(0).unwrap().1.span,
-            ));
-        }
-
-        // Typecheck the program's structs.
-        input.structs.iter().for_each(|(_, function)| self.visit_struct_stub(function));
-
-        // Typecheck the program's functions.
-        input.functions.iter().for_each(|(_, function)| self.visit_function_stub(function));
-    }
-
-    fn visit_function_stub(&mut self, input: &'a FunctionStub) {
-        // Cannot have finalize scopes
-        if input.finalize.is_some() {
-            self.emit_err(TypeCheckerError::stub_functions_must_have_no_finalize(
-                input.finalize.as_ref().unwrap().span,
-            ));
-        }
-
-        // Must be transition functions
-        if input.variant == Variant::Inline {
-            self.emit_err(TypeCheckerError::stub_functions_must_not_be_inlines(input.span));
-        }
-
-        // Must be empty
         if !input.block.statements.is_empty() {
             self.emit_err(TypeCheckerError::stub_functions_must_be_empty(input.block.span));
         }

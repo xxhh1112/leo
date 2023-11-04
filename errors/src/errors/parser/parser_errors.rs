@@ -292,30 +292,6 @@ create_messages!(
         help: None,
     }
 
-    /// Enforce that empty functions cannot have finalize functions attached to them
-    @formatted
-    empty_function_cannot_have_finalize {
-        args: (),
-        msg: format!("Empty functions cannot have finalize functions attached to them."),
-        help: None,
-    }
-
-    /// Enforce that cannot use an external type to do anything except input/output of function
-    @formatted
-    external_type_cannot_be_used_inside_function {
-        args: (program: impl Display, file_type: impl Display),
-        msg: format!("External types cannot be used inside function (only as input/output types) -- found exported type from '{program}.{file_type}'."),
-        help: None,
-    }
-
-    /// Enforce that cannot use import in program scope
-    @formatted
-    cannot_import_inside_program_body {
-        args: (),
-        msg: format!("Cannot use import inside program body."),
-        help: None,
-    }
-
     @formatted
     array_must_have_at_least_one_element {
         args: (kind: impl Display),

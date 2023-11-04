@@ -189,7 +189,7 @@ impl<N: Network, Instruction: InstructionTrait<N>> From<&ClosureCore<N, Instruct
         let output_type = match output_vec.len() {
             0 => Type::Unit,
             1 => output_vec[0].clone(),
-            _ => Type::Tuple(Tuple(output_vec)),
+            _ => Type::Tuple(TupleType::new(output_vec)),
         };
         Self {
             annotations: Vec::new(),
@@ -272,13 +272,13 @@ impl<N: Network, Instruction: InstructionTrait<N>, Command: CommandTrait<N>>
             .iter()
             .map(|output| match output {
                 Output::Internal(output) => output.type_.clone(),
-                Output::External(output) => Type::Identifier(output.record.clone()),
+                Output::External(output) => Type::Identifier(output.record),
             })
             .collect_vec();
         let output_type = match output_vec.len() {
             0 => Type::Unit,
             1 => output_vec[0].clone(),
-            _ => Type::Tuple(Tuple(output_vec)),
+            _ => Type::Tuple(TupleType::new(output_vec)),
         };
 
         Self {

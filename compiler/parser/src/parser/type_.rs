@@ -81,7 +81,7 @@ impl ParserContext<'_> {
         if let Some(ident) = self.eat_identifier() {
             // Check if using external type
             let file_type = self.look_ahead(1, |t| &t.token);
-            if &self.token.token == &Token::Dot && (file_type == &Token::Leo || file_type == &Token::Aleo) {
+            if self.token.token == Token::Dot && (file_type == &Token::Leo || file_type == &Token::Aleo) {
                 return Err(ParserError::external_type_cannot_be_used_inside_function(
                     ident,
                     file_type,

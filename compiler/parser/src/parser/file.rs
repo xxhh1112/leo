@@ -128,7 +128,7 @@ impl ParserContext<'_> {
         self.expect(&Token::Dot)?;
 
         // Otherwise throw parser error
-        self.expect(&Token::Aleo).or_else(|_| Err(ParserError::invalid_network(self.token.span)))?;
+        self.expect(&Token::Aleo).map_err(|_| ParserError::invalid_network(self.token.span))?;
 
         // Construct the program id.
         let program_id =
@@ -221,7 +221,7 @@ impl ParserContext<'_> {
         // Parse `program` keyword.
         let start = self.expect(&Token::Program)?;
         let (program_scope, imports) = self.parse_program_body(start)?;
-        if imports.len() != 0 {
+        if !imports.is_empty() {
             self.emit_err(ParserError::cannot_import_inside_program_body(self.token.span));
         }
         Ok(program_scope)
